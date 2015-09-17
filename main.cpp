@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -47,14 +48,7 @@ void display(void)
 {
 	glClear(GL_COLOR_BUFFER_BIT);
 
-	glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
 
-	gluLookAt(camPos[0], camPos[1], camPos[2], 0, 0, 0, 0, 1, 0);
-	glColor3f(1, 1, 1);
-
-	////draw the teapot
-	glutSolidTeapot(1);
 
 	//flush out to single buffer
 	glFlush();
@@ -66,7 +60,7 @@ int main(int argc, char** argv)
 	glutInit(&argc, argv);		//starts up GLUT
 	glutInitDisplayMode(GLUT_RGBA);
 
-	glutInitWindowSize(400, 400);
+	glutInitWindowSize(600, 600);
 	glutInitWindowPosition(50, 50);
 
 	glutCreateWindow("3GC3 Boilerplate");	//creates the window
